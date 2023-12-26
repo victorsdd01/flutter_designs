@@ -1,0 +1,51 @@
+{
+    "sections":[
+        {
+            "id":0,
+            "name":"section 2: Background customs",
+            "routeName": "section2",
+            "widgets": [
+                {
+                    "widgetName":"Square header",
+                    "widget": "SquareHeader()"
+                },
+                {
+                    "widgetName":"Square header",
+                    "widget": "SquareHeader()"
+                },
+                {
+                    "widgetName":"Square header",
+                    "widget": "SquareHeader()"
+                },
+                {
+                    "widgetName":"Square header",
+                    "widget": "SquareHeader()"
+                }
+            ]
+        },
+        {
+            "id":1,
+            "name":"section 3: Animaciones personalizadas",
+            "routeName": "section3",
+            "widgets": []
+        },
+        {
+            "id":2,
+            "name":"section 4",
+            "routeName": "section4",
+            "widgets": []
+        },
+        {
+            "id":3,
+            "name":"section 5",
+            "routeName": "section5",
+            "widgets": []
+        },
+        {
+            "id":0,
+            "name":"section 6",
+            "routeName": "section6",
+            "widgets": []
+        }
+    ]
+}
