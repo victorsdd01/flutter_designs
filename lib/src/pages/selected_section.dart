@@ -13,7 +13,7 @@ class SelectedSection extends StatelessWidget {
   
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=> Navigator.pushReplacementNamed(context, 'home'), icon: const Icon(Icons.arrow_back, color: Colors.white, size: 20,)),
+        leading: IconButton(onPressed: ()=> Navigator.pushReplacementNamed(context, 'home'), icon: const Icon(Icons.arrow_back, color: Colors.black, size: 20,)),
         title: Text(data.name)
       ),
       body: ListView.builder(
@@ -25,26 +25,55 @@ class SelectedSection extends StatelessWidget {
             trailing: IconButton(
               onPressed: () {
                 switch (widget.widget) {
+                  // section 2
                   case "SquareHeader()":
                     Navigator.pushReplacement(context, MaterialPageRoute(
-                        builder: (context) => ExampleMask(widget: const SquareHeader())
+                        builder: (context) => ExampleMask(widget: const SquareHeader(), name: widget.widgetName, section: data,)
                       )
                     );
                     break;
                     case "RoundedBordersHeader()":
                     Navigator.pushReplacement(context, MaterialPageRoute(
-                        builder: (context) => ExampleMask(widget: const RoundedBordersHeader())
+                        builder: (context) => ExampleMask(widget: const RoundedBordersHeader(), name: widget.widgetName, section: data,)
                       )
                     );
                     break;
                     case "DiagonalHeader()":
                     Navigator.pushReplacement(context, MaterialPageRoute(
-                        builder: (context) => ExampleMask(widget: const DiagonalHeader())
+                        builder: (context) => ExampleMask(widget: const DiagonalHeader(), name: widget.widgetName, section: data,)
                       )
                     );
                     break;
-
-                  default:
+                    case "DiagonalPainter()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context) => ExampleMask(widget: const DiagonalHeader(), name: widget.widgetName, section: data,)
+                      )
+                    );
+                    break;
+                    case "TruanguleHeader()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context) => ExampleMask(widget: const DiagonalHeader(), name: widget.widgetName, section: data,)
+                      )
+                    );
+                    break;
+                    case "TriangulePainter()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context) => ExampleMask(widget: const DiagonalHeader(), name: widget.widgetName, section: data,)
+                      )
+                    );
+                    break;
+                    //------------
+                    // section 3
+                    case "Rectangle()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const Rectangle(), name: widget.widgetName, section: data)));
+                    break;
+                    case "AnimatedSquare()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const AnimatedSquare(), name: widget.widgetName, section: data),));
+                    break;
+                    //seaction 4
+                    case "CircularProgress()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const CircularProgress(), name: widget.widgetName, section: data),));
+                    break;
                 }
               }, 
               icon: const Icon(Icons.keyboard_arrow_right_outlined, color: Colors.black, size: 20,)

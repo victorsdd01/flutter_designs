@@ -10,30 +10,52 @@
                     "widget": "SquareHeader()"
                 },
                 {
-                    "widgetName":"Square header",
-                    "widget": "SquareHeader()"
+                    "widgetName":"Rounded border",
+                    "widget": "RoundedBordersHeader()"
                 },
                 {
-                    "widgetName":"Square header",
-                    "widget": "SquareHeader()"
+                    "widgetName":"Diagonal header",
+                    "widget": "DiagonalHeader()"
                 },
                 {
-                    "widgetName":"Square header",
-                    "widget": "SquareHeader()"
+                    "widgetName":"Diagonal painter",
+                    "widget": "DiagonalPainter()"
+                },
+                {
+                    "widgetName":"Triangule header",
+                    "widget": "TruanguleHeader()"
+                },
+                {
+                    "widgetName":"Triagule header",
+                    "widget": "TriangulePainter()"
                 }
             ]
         },
         {
             "id":1,
-            "name":"section 3: Animaciones personalizadas",
+            "name":"section 3: Custom animations",
             "routeName": "section3",
-            "widgets": []
+            "widgets": [
+                {
+                    "widgetName":"Rectangle",
+                    "widget": "Rectangle()"
+                },
+                {
+                    "widgetName":"Animated square",
+                    "widget":"AnimatedSquare()"
+                }
+            ]
         },
         {
             "id":2,
-            "name":"section 4",
+            "name":"section 4: Progress bar circular - animated custom painter",
             "routeName": "section4",
-            "widgets": []
+            "widgets": [
+                {
+                    "widgetName":"CircularProgress",
+                    "widget":"CircularProgress()"
+                }
+            ]
         },
         {
             "id":3,
@@ -42,7 +64,7 @@
             "widgets": []
         },
         {
-            "id":0,
+            "id":4,
             "name":"section 6",
             "routeName": "section6",
             "widgets": []
