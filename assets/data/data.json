@@ -78,6 +78,50 @@
                     "widget":"Pinterest()"
                 }
             ]
+        },
+        {
+            "id":5,
+            "name":"section 7: Emergency Layout",
+            "routeName": "section7",
+            "widgets": [
+                {
+                    "widgetName":"Emergency layout",
+                    "widget":"EmergencyLayout()"
+                }
+            ]
+        },
+        {
+            "id":6,
+            "name":"section 8:",
+            "routeName": "section8",
+            "widgets": [
+                {
+                    "widgetName":"Pinterest",
+                    "widget":"Pinterest()"
+                }
+            ]
+        },
+        {
+            "id":7,
+            "name":"section 9:",
+            "routeName": "section9",
+            "widgets": [
+                {
+                    "widgetName":"Pinterest",
+                    "widget":"Pinterest()"
+                }
+            ]
+        },
+        {
+            "id":8,
+            "name":"section 10:",
+            "routeName": "section10",
+            "widgets": [
+                {
+                    "widgetName":"Pinterest",
+                    "widget":"Pinterest()"
+                }
+            ]
         }
     ]
 }
