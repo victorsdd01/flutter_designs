@@ -59,9 +59,14 @@
         },
         {
             "id":3,
-            "name":"section 5",
+            "name":"section 5: Slide show",
             "routeName": "section5",
-            "widgets": []
+            "widgets": [
+                {
+                    "widgetName":"SlideShow",
+                    "widget":"SlideShow()"
+                }
+            ]
         },
         {
             "id":4,

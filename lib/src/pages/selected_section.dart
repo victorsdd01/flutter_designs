@@ -74,6 +74,11 @@ class SelectedSection extends StatelessWidget {
                     case "CircularProgress()":
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const CircularProgress(), name: widget.widgetName, section: data),));
                     break;
+                    //------
+                    // section 5
+                    case "SlideShow()" :
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const SlideShow(), name: widget.widgetName, section: data),));
+                    break;
                 }
               }, 
               icon: const Icon(Icons.keyboard_arrow_right_outlined, color: Colors.black, size: 20,)
