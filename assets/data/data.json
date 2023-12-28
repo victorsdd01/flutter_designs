@@ -70,9 +70,14 @@
         },
         {
             "id":4,
-            "name":"section 6",
+            "name":"section 6: Pinteres layout and menu",
             "routeName": "section6",
-            "widgets": []
+            "widgets": [
+                {
+                    "widgetName":"Pinterest",
+                    "widget":"Pinterest()"
+                }
+            ]
         }
     ]
 }

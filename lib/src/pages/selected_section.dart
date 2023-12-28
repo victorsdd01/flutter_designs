@@ -79,6 +79,10 @@ class SelectedSection extends StatelessWidget {
                     case "SlideShow()" :
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const SlideShow(), name: widget.widgetName, section: data),));
                     break;
+                    // section 6
+                    case "Pinterest()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const Pinteres(), name: widget.widgetName, section: data),));
+                    break;
                 }
               }, 
               icon: const Icon(Icons.keyboard_arrow_right_outlined, color: Colors.black, size: 20,)
