@@ -87,6 +87,10 @@ class SelectedSection extends StatelessWidget {
                     case "EmergencyLayout()":
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const EmergencyLayout(), name: widget.widgetName, section: data)));
                     break;
+                    //---- section 8
+                    case "SliversWidgets()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const SliversWidgets(), name: widget.widgetName, section: data) ,));
+                    break;
                 }
               }, 
               icon: const Icon(Icons.keyboard_arrow_right_outlined, color: Colors.black, size: 20,)

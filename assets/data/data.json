@@ -92,12 +92,12 @@
         },
         {
             "id":6,
-            "name":"section 8:",
+            "name":"section 8: Slivers",
             "routeName": "section8",
             "widgets": [
                 {
-                    "widgetName":"Pinterest",
-                    "widget":"Pinterest()"
+                    "widgetName":"SliversWidgets",
+                    "widget":"SliversWidgets()"
                 }
             ]
         },
