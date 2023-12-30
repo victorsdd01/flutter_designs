@@ -103,12 +103,12 @@
         },
         {
             "id":7,
-            "name":"section 9:",
+            "name":"section 9: X intro",
             "routeName": "section9",
             "widgets": [
                 {
-                    "widgetName":"Pinterest",
-                    "widget":"Pinterest()"
+                    "widgetName":"Twitter",
+                    "widget":"Twitter()"
                 }
             ]
         },
