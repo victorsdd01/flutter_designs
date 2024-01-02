@@ -1,11 +1,13 @@
 import 'package:designs/src/providers/providers.dart';
 import 'package:designs/src/routes/routes.dart';
+import 'package:designs/src/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(MultiProvider(
     providers: [
+      ChangeNotifierProvider(create: (_) => AppTheme()),
       ChangeNotifierProvider(create: (_) => SliderShowProvider()),
       ChangeNotifierProvider(create: (_) => PinteresProvider())
     ],
@@ -19,7 +21,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
+      themeAnimationDuration: const Duration(seconds: 1),
+      themeAnimationCurve: Curves.easeInQuad,
+      theme: context.watch<AppTheme>().currentTheme,
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.routes,
