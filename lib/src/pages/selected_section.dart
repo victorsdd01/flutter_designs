@@ -94,6 +94,9 @@ class SelectedSection extends StatelessWidget {
                     // ---- section 9
                     case "Twitter()":
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const Xintro(), name: widget.widgetName, section: data),));
+                    break;
+                    case "ShoesApp()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const ShoesApp(), name: widget.widgetName, section: data),));
                 }
               }, 
               icon: const Icon(Icons.keyboard_arrow_right_outlined, color: Colors.black, size: 20,)

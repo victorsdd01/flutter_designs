@@ -9,7 +9,9 @@ void main() {
     providers: [
       ChangeNotifierProvider(create: (_) => AppTheme()),
       ChangeNotifierProvider(create: (_) => SliderShowProvider()),
-      ChangeNotifierProvider(create: (_) => PinteresProvider())
+      ChangeNotifierProvider(create: (_) => PinteresProvider()),
+      ChangeNotifierProvider(create: (_) => ShoeProvider()),
+
     ],
     child: const MyApp(),
   ));

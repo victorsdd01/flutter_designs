@@ -114,12 +114,12 @@
         },
         {
             "id":8,
-            "name":"section 10:",
+            "name":"section 10: Shoes app",
             "routeName": "section10",
             "widgets": [
                 {
-                    "widgetName":"Pinterest",
-                    "widget":"Pinterest()"
+                    "widgetName":"ShoesApp",
+                    "widget":"ShoesApp()"
                 }
             ]
         }
