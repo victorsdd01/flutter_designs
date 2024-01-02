@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeAnimationDuration: const Duration(seconds: 1),
-      themeAnimationCurve: Curves.easeInQuad,
+      themeAnimationCurve: Curves.ease,
       theme: context.watch<AppTheme>().currentTheme,
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.initialRoute,

@@ -5,6 +5,7 @@ import 'dart:ui';
 
 import 'package:designs/src/providers/providers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class ShoesApp extends StatelessWidget {
@@ -76,40 +77,37 @@ class ShoesApp extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20.0,),
-              TweenAnimationBuilder(
-                curve: Curves.ease,
-                tween: Tween(begin: -120.0, end: 25.0), 
-                duration: const Duration(milliseconds: 1200), 
-                builder: (context, value, child) {
-                  return Transform.translate(
-                    offset: Offset(value - 25.0, 0.0),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left:10.0),
-                      child: child!,
-                    ),
-                  );
-                },
-                child: Container(
-                  width: MediaQuery.of(context).size.width * 0.90,
-                  height: MediaQuery.of(context).size.height * 0.5,
-                  decoration: BoxDecoration(
-                    color: Colors.amber.shade400,
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                            Navigator.pushReplacement(context, MaterialPageRoute(
-                            builder: (context) => const DetailsPage(),)
-                          );
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(35),
-                          child: Hero(
-                            tag: 'nike-image',
+              Container(
+                width: MediaQuery.of(context).size.width * 0.90,
+                height: MediaQuery.of(context).size.height * 0.5,
+                decoration: BoxDecoration(
+                  color: Colors.amber.shade400,
+                  borderRadius: BorderRadius.circular(60),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(
+                          builder: (context) => const DetailsPage(),)
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(35),
+                        child: Hero(
+                          tag: 'nike-image',
+                          child: TweenAnimationBuilder(
+                            curve: Curves.ease,
+                            tween: Tween(begin: - 5.0, end: 5.0),
+                            duration: const Duration(seconds: 1),
+                            builder: (BuildContext context, double value, Widget? child) {
+                               return Transform.translate(
+                                  offset: Offset(0.0, value - 5.0),
+                                  child: child,
+                               );
+                             },
                             child: Image.asset(
                               'assets/img/${context.watch<ShoeProvider>().currentColor}.png',
                               filterQuality: FilterQuality.high,
@@ -117,36 +115,36 @@ class ShoesApp extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(bottom: 26.0),
-                        width: double.infinity,
-                        height: MediaQuery.of(context).size.height * 0.08,
-                        child: Center(
-                          child: ListView.builder(
-                            itemCount: sizes.length,
-                            shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (context, index) {
-                              final String size = sizes[index];
-                              return Container(
-                                margin: const EdgeInsets.all(2.0),
-                                child: GestureDetector(
-                                  onTap: () => Provider.of<ShoeProvider>(context, listen: false).selectedShoeSize = index,
-                                  child: Chip(
-                                    color: MaterialStateColor.resolveWith((_) => context.watch<ShoeProvider>().selectedShoeSize == index ?  Colors.orange: Colors.white),
-                                    materialTapTargetSize: MaterialTapTargetSize.padded,
-                                    side: BorderSide.none,
-                                    elevation: 0.6,
-                                    label: Text(size, style: TextStyle(color: context.watch<ShoeProvider>().selectedShoeSize == index ? Colors.white : Colors.amber.shade800),)
-                                  ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(bottom: 26.0),
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height * 0.08,
+                      child: Center(
+                        child: ListView.builder(
+                          itemCount: sizes.length,
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            final String size = sizes[index];
+                            return Container(
+                              margin: const EdgeInsets.all(2.0),
+                              child: GestureDetector(
+                                onTap: () => Provider.of<ShoeProvider>(context, listen: false).selectedShoeSize = index,
+                                child: Chip(
+                                  color: MaterialStateColor.resolveWith((_) => context.watch<ShoeProvider>().selectedShoeSize == index ?  Colors.orange: Colors.white),
+                                  materialTapTargetSize: MaterialTapTargetSize.padded,
+                                  side: BorderSide.none,
+                                  elevation: 0.6,
+                                  label: Text(size, style: TextStyle(color: context.watch<ShoeProvider>().selectedShoeSize == index ? Colors.white : Colors.amber.shade800),)
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            );
+                          },
                         ),
-                      )
-                    ],
-                  ),
+                      ),
+                    )
+                  ],
                 ),
               ),
               Row(
@@ -242,20 +240,24 @@ class ShoesApp extends StatelessWidget {
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key});
 
+  
+
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
     List<Color> _colors = [const Color(0xff41545c), const Color(0xff40a6f3), const Color(0xfffcb302), const Color(0xffcedc38)];
 
     return Scaffold(
       body: SafeArea(
-        top: true,
+        top: false,
         child: Column(
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.4,
-              margin: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
+              margin: const EdgeInsets.all(3.5),
               padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
                 color: Colors.amber,
@@ -272,11 +274,14 @@ class DetailsPage extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: IconButton(
-                      onPressed: () => Navigator.pushReplacement(context, 
+                      onPressed: () {
+                        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+                        Navigator.pushReplacement(context, 
                         MaterialPageRoute(
                           builder: (context) => const ShoesApp(),
                         )
-                      ),
+                      );
+                      },
                       icon: const Icon(Icons.chevron_left_outlined, color: Colors.white, size: 30,)
                     ),
                   )
