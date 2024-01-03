@@ -17,7 +17,7 @@ class ExampleMask extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return section.id == 8 ? widget : Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () => Navigator.pushReplacementNamed(context, 'selected-section', arguments: section), icon: const Icon(Icons.arrow_back)),
         title: Text(name),

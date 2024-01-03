@@ -74,6 +74,33 @@ class SelectedSection extends StatelessWidget {
                     case "CircularProgress()":
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const CircularProgress(), name: widget.widgetName, section: data),));
                     break;
+                    //------
+                    // section 5
+                    case "SlideShow()" :
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const SlideShow(), name: widget.widgetName, section: data),));
+                    break;
+                    // section 6
+                    case "Pinterest()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const Pinteres(), name: widget.widgetName, section: data),));
+                    break;
+                    //--- section 7
+                    case "EmergencyLayout()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const EmergencyLayout(), name: widget.widgetName, section: data)));
+                    break;
+                    //---- section 8
+                    case "SliversWidgets()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const SliversWidgets(), name: widget.widgetName, section: data) ,));
+                    break;
+                    // ---- section 9
+                    case "Twitter()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const Xintro(), name: widget.widgetName, section: data),));
+                    break;
+                    case "ShoesApp()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const ShoesApp(), name: widget.widgetName, section: data),));
+                    break;
+                    case "MusicPlayer()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MusicPlayer(),));
+                    break;
                 }
               }, 
               icon: const Icon(Icons.keyboard_arrow_right_outlined, color: Colors.black, size: 20,)

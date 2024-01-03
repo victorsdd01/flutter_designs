@@ -59,15 +59,80 @@
         },
         {
             "id":3,
-            "name":"section 5",
+            "name":"section 5: Slide show",
             "routeName": "section5",
-            "widgets": []
+            "widgets": [
+                {
+                    "widgetName":"SlideShow",
+                    "widget":"SlideShow()"
+                }
+            ]
         },
         {
             "id":4,
-            "name":"section 6",
+            "name":"section 6: Pinteres layout and menu",
             "routeName": "section6",
-            "widgets": []
+            "widgets": [
+                {
+                    "widgetName":"Pinterest",
+                    "widget":"Pinterest()"
+                }
+            ]
+        },
+        {
+            "id":5,
+            "name":"section 7: Emergency Layout",
+            "routeName": "section7",
+            "widgets": [
+                {
+                    "widgetName":"Emergency layout",
+                    "widget":"EmergencyLayout()"
+                }
+            ]
+        },
+        {
+            "id":6,
+            "name":"section 8: Slivers",
+            "routeName": "section8",
+            "widgets": [
+                {
+                    "widgetName":"SliversWidgets",
+                    "widget":"SliversWidgets()"
+                }
+            ]
+        },
+        {
+            "id":7,
+            "name":"section 9: X intro",
+            "routeName": "section9",
+            "widgets": [
+                {
+                    "widgetName":"Twitter",
+                    "widget":"Twitter()"
+                }
+            ]
+        },
+        {
+            "id":8,
+            "name":"section 10: Shoes app",
+            "routeName": "section10",
+            "widgets": [
+                {
+                    "widgetName":"ShoesApp",
+                    "widget":"ShoesApp()"
+                }
+            ]
+        },
+        {
+            "id":9,
+            "name":"section 11: Music player",
+            "routeName": "section11",
+            "widgets": [
+                {
+                    "widgetName":"MusicPlayer",
+                    "widget":"MusicPlayer()"
+                }
+            ]
         }
     ]
 }
