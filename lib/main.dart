@@ -11,6 +11,8 @@ void main() {
       ChangeNotifierProvider(create: (_) => SliderShowProvider()),
       ChangeNotifierProvider(create: (_) => PinteresProvider()),
       ChangeNotifierProvider(create: (_) => ShoeProvider()),
+      ChangeNotifierProvider(create: (_) => MusicPlayerProvider()),
+      
 
     ],
     child: const MyApp(),

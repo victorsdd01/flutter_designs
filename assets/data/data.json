@@ -122,6 +122,17 @@
                     "widget":"ShoesApp()"
                 }
             ]
+        },
+        {
+            "id":9,
+            "name":"section 11: Music player",
+            "routeName": "section11",
+            "widgets": [
+                {
+                    "widgetName":"MusicPlayer",
+                    "widget":"MusicPlayer()"
+                }
+            ]
         }
     ]
 }

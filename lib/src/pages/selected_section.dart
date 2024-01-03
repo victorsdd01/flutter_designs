@@ -97,6 +97,10 @@ class SelectedSection extends StatelessWidget {
                     break;
                     case "ShoesApp()":
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ExampleMask(widget: const ShoesApp(), name: widget.widgetName, section: data),));
+                    break;
+                    case "MusicPlayer()":
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MusicPlayer(),));
+                    break;
                 }
               }, 
               icon: const Icon(Icons.keyboard_arrow_right_outlined, color: Colors.black, size: 20,)
