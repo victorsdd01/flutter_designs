@@ -1,16 +1,7 @@
-# designs
+# Some examples for this project
 
-A new Flutter project.
+# Pinteres bottom navigation bar:
+![flutter-pinteres-animation](https://github.com/victorsdd01/flutter_designs/assets/61807238/a061ea7e-f3c5-4657-8d77-3c5234aaa07d)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Shoes app demo:
+![shoes_app_animation](https://github.com/victorsdd01/flutter_designs/assets/61807238/f590620d-ca69-4548-9351-e65a8f7f3a96)
